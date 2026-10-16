@@ -1,11 +1,9 @@
-torch>=2.1
-torchvision>=0.16
-timm>=0.9
-thop
-scikit-learn
+# All notebooks use TensorFlow / Keras (Python 3.10+)
+tensorflow>=2.16
 numpy
+pandas
 matplotlib
+scikit-learn
 pillow
-datasets
-pytest
+huggingface_hub
 jupyter
