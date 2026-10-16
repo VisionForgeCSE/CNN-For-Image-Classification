@@ -1,0 +1,9 @@
+# All notebooks use TensorFlow / Keras (Python 3.10+)
+tensorflow>=2.16
+numpy
+pandas
+matplotlib
+scikit-learn
+pillow
+huggingface_hub
+jupyter

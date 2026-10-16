@@ -1,0 +1,17 @@
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Full training checkpoints (include optimizer state, can be regenerated).
+# The deployable models (results/<id>.keras) are kept.
+*_full.keras
