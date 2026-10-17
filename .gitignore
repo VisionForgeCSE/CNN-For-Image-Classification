@@ -15,3 +15,8 @@ Thumbs.db
 # Full training checkpoints (include optimizer state, can be regenerated).
 # The deployable models (results/<id>.keras) are kept.
 *_full.keras
+
+# Dataset: downloaded zip and image folders are rebuilt by Dataset.ipynb.
+# Only the split (data/eurosat_split.csv) is committed.
+data/*.zip
+data/eurosat/
