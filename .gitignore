@@ -15,3 +15,8 @@ Thumbs.db
 # Full training checkpoints (include optimizer state, can be regenerated).
 # The deployable models (results/<id>.keras) are kept.
 *_full.keras
+
+# Downloaded EuroSAT images, archives, and generated experiment artifacts.
+data/
+EuroSAT_RGB/
+eurosat_results/
