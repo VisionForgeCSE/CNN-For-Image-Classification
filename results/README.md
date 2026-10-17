@@ -37,13 +37,15 @@ notebook can build its tables from these files alone – nobody needs another me
 | `precision_macro` | float | 0–1 |
 | `recall_macro` | float | 0–1 |
 | `f1_macro` | float | 0–1 |
-| `per_class` | dict | `{"cats": {"precision": …, "recall": …, "f1": …}, …}` |
-| `confusion_matrix` | list[list[int]] | rows = true class, columns = predicted, order `["cats", "dogs", "snakes"]` |
+| `per_class` | dict | `{"AnnualCrop": {"precision": …, "recall": …, "f1": …}, …}` |
+| `confusion_matrix` | list[list[int]] | rows = true class, columns = predicted, order = the 10 class names sorted alphabetically (AnnualCrop … SeaLake) |
 | `history` | dict | `loss`, `val_loss`, `accuracy`, `val_accuracy` lists from `model.fit` |
 
 All values must be plain Python types (use `float(...)`, `int(...)`, `.tolist()`), otherwise `json.dump` fails.
 
 ## Example
+
+Illustrative values only (lists shortened to two entries; real files have 10 classes and one value per epoch).
 
 ```json
 {
@@ -57,12 +59,12 @@ All values must be plain Python types (use `float(...)`, `int(...)`, `.tolist()`
   "time_per_epoch_s": 3.73,
   "optimizer": "Adam",
   "learning_rate": 0.001,
-  "test_accuracy": 0.7111,
-  "precision_macro": 0.7087,
-  "recall_macro": 0.7111,
-  "f1_macro": 0.7037,
-  "per_class": {"cats": {"precision": 0.6667, "recall": 0.7333, "f1": 0.6984}},
-  "confusion_matrix": [[110, 30, 10], [45, 78, 27], [10, 8, 132]],
+  "test_accuracy": 0.96,
+  "precision_macro": 0.96,
+  "recall_macro": 0.96,
+  "f1_macro": 0.96,
+  "per_class": {"AnnualCrop": {"precision": 0.95, "recall": 0.97, "f1": 0.96}, "Forest": {"precision": 0.99, "recall": 0.98, "f1": 0.98}},
+  "confusion_matrix": [[436, 2], [1, 441]],
   "history": {"loss": [1.05, 0.94], "val_loss": [0.90, 0.89], "accuracy": [0.40, 0.52], "val_accuracy": [0.54, 0.57]}
 }
 ```

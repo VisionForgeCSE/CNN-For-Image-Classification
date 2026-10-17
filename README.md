@@ -11,24 +11,26 @@ Group _no._ · EN3150 Pattern Recognition
 
 ## Dataset
 
-[Jogitha/Animal_Image_Classification_Dataset](https://huggingface.co/datasets/Jogitha/Animal_Image_Classification_Dataset)
-(Hugging Face) – 3 classes: **cats, dogs, snakes**, 1000 images each.
+[EuroSAT RGB](https://zenodo.org/records/7711810) (Helber et al., IEEE JSTARS 2019) – Sentinel-2 satellite images,
+**10 land-use classes**, 27,000 images of **64×64 RGB** (the maximum resolution the brief allows, so no downscaling).
 
-- Downscaled to **64×64 RGB** (EXIF rotation fixed, centre-cropped, Lanczos resize) to emulate a low-resource sensor
-- Stratified split with seed 42: **70 / 15 / 15** → train 2100, validation 450, test 450 (700 / 150 / 150 per class)
+- Classes: AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, PermanentCrop, Residential,
+  River, SeaLake – 2,000 to 3,000 images each (largest / smallest = 1.5)
+- Stratified split with seed 42: **70 / 15 / 15** → train 18,900, validation 4,050, test 4,050
 - No data augmentation
-- The split is committed in `animal/train`, `animal/val`, `animal/test` – every model uses exactly these images
+- `Dataset.ipynb` downloads the data and builds `data/eurosat/train|val|test/<class>/`. The image folders are not
+  committed; the split is committed in `data/eurosat_split.csv`, so every model uses exactly the same images
 
 ## Repository layout
 
 ```
-Dataset.ipynb               download, downscale to 64×64, split 70/15/15  → animal/
+Dataset.ipynb               download EuroSAT, check, split 70/15/15       → data/eurosat/
 ModelA.ipynb                Model A – standard CNN
 ModelB.ipynb                Model B – depthwise-separable CNN
 SOTA_MobileNetV2.ipynb      fine-tuned MobileNetV2
 SOTA_EfficientNetB0.ipynb   fine-tuned EfficientNet-B0
 Comparison.ipynb            tables and plots built from results/*.json only
-animal/                     64×64 dataset (train / val / test)
+data/eurosat_split.csv      which image is in train / val / test (data/eurosat/ is rebuilt locally)
 results/                    one <id>.json + <id>.keras per model – format in results/README.md
 figures/                    figures for the report
 planning/                   proposed GitHub issues
@@ -41,8 +43,8 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-1. `Dataset.ipynb` – only needed to regenerate `animal/` (it is already in the repository).
-2. Any model notebook – each one is independent and reads `animal/` directly.
+1. `Dataset.ipynb` – run once: downloads EuroSAT (~95 MB) and builds `data/eurosat/` from the committed split.
+2. Any model notebook – each one is independent and reads `data/eurosat/` directly.
 3. `Comparison.ipynb` – after the model notebooks have written their `results/*.json`.
 
 A GPU (e.g. Google Colab) is recommended; on CPU the custom models still train in a few minutes.
