@@ -23,3 +23,6 @@ data/eurosat/
 
 # Downloaded pretrained Keras weights (recreated from official sources).
 data/keras_cache/
+
+# EfficientNet recovery checkpoints; commit selected final exports and experiment records.
+results/efficientnet_checkpoints/
