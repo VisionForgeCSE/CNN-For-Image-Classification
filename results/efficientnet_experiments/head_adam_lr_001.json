@@ -1,0 +1,125 @@
+{
+  "status": "completed",
+  "metadata": {
+    "schema": 1,
+    "pipeline": "eurosat-raw255-bounded-v1",
+    "run_id": "head_adam_lr_001",
+    "stage": "head",
+    "learning_rate": 0.001,
+    "epochs": 5,
+    "batch_size": 4,
+    "seed": 42,
+    "smoke": false,
+    "unfreeze_from": null,
+    "schedule": false,
+    "early_stopping": false,
+    "parent_checkpoint_sha256": null,
+    "pretrained": {
+      "architecture": "EfficientNetB0",
+      "pretrained_dataset": "ImageNet",
+      "include_top": false,
+      "input_shape": [
+        64,
+        64,
+        3
+      ],
+      "input_range": [
+        0,
+        255
+      ],
+      "head_dropout": 0.3,
+      "weights_url": "https://storage.googleapis.com/keras-applications/efficientnetb0_notop.h5",
+      "weights_md5": "50bc09e76180e00e4465e1a485ddc09d",
+      "weights_sha256": "0683edcf6151811fb3ddd6f098ac48df644d74592c4919a5acdee1c37554add2",
+      "tensorflow": "2.21.0",
+      "keras": "3.15.1",
+      "python": "3.12.2",
+      "split_sha256": "0cf4cc1ca5601a80a4a9c7ce47fb3435fcf95a36eba01802e0d08baf719f0c3c"
+    },
+    "class_names": [
+      "AnnualCrop",
+      "Forest",
+      "HerbaceousVegetation",
+      "Highway",
+      "Industrial",
+      "Pasture",
+      "PermanentCrop",
+      "Residential",
+      "River",
+      "SeaLake"
+    ],
+    "optimizer": "Adam",
+    "sample_counts": {
+      "train": 18900,
+      "val": 4050
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "devices": [
+      "/physical_device:CPU:0"
+    ],
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "TF_NUM_INTRAOP_THREADS": "1",
+      "TF_NUM_INTEROP_THREADS": "1"
+    }
+  },
+  "history": {
+    "loss": [
+      0.45006483793258667,
+      0.3202764689922333,
+      0.3003809452056885,
+      0.28525593876838684,
+      0.2825287878513336
+    ],
+    "accuracy": [
+      0.8534391522407532,
+      0.8935449719429016,
+      0.8991534113883972,
+      0.9034391641616821,
+      0.908042311668396
+    ],
+    "val_loss": [
+      0.30324602127075195,
+      0.2976605296134949,
+      0.27634918689727783,
+      0.2983541786670685,
+      0.2753218114376068
+    ],
+    "val_accuracy": [
+      0.899506151676178,
+      0.9017283916473389,
+      0.9079012274742126,
+      0.9012345671653748,
+      0.9130864143371582
+    ],
+    "learning_rate": [
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.0010000000474974513
+    ],
+    "seconds": [
+      94.39505679998547,
+      87.48073619999923,
+      87.99086600000737,
+      88.81681459999527,
+      86.67271270000492
+    ]
+  },
+  "recovery": null,
+  "epochs_run": 5,
+  "best_epoch": 5,
+  "best_val_accuracy": 0.9130864143371582,
+  "best_val_loss": 0.2753218114376068,
+  "trainable_params": 12810,
+  "total_params": 4062381,
+  "time_per_epoch_s": 87.7402823750017,
+  "timing_excludes_first_epoch": true,
+  "best_checkpoint": "results\\efficientnet_checkpoints\\head_adam_lr_001\\best_full.keras",
+  "latest_checkpoint": "results\\efficientnet_checkpoints\\head_adam_lr_001\\latest_full.keras",
+  "best_checkpoint_sha256": "c179a90c5b2759c32f1a44b0c8e89b42ab982e49a5289a391eb7d243973f0c4e",
+  "latest_checkpoint_sha256": "23f80a672a05ea238f941f026c88a1753fb17bcd7721d206ffc890c1059c7934"
+}

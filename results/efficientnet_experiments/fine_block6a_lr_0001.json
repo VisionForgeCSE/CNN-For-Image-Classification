@@ -1,0 +1,155 @@
+{
+  "status": "completed",
+  "metadata": {
+    "schema": 1,
+    "pipeline": "eurosat-raw255-bounded-v1",
+    "run_id": "fine_block6a_lr_0001",
+    "stage": "finetune",
+    "learning_rate": 0.0001,
+    "epochs": 10,
+    "batch_size": 4,
+    "seed": 42,
+    "smoke": false,
+    "unfreeze_from": "block6a",
+    "schedule": false,
+    "early_stopping": false,
+    "parent_checkpoint_sha256": "c179a90c5b2759c32f1a44b0c8e89b42ab982e49a5289a391eb7d243973f0c4e",
+    "pretrained": {
+      "architecture": "EfficientNetB0",
+      "pretrained_dataset": "ImageNet",
+      "include_top": false,
+      "input_shape": [
+        64,
+        64,
+        3
+      ],
+      "input_range": [
+        0,
+        255
+      ],
+      "head_dropout": 0.3,
+      "weights_url": "https://storage.googleapis.com/keras-applications/efficientnetb0_notop.h5",
+      "weights_md5": "50bc09e76180e00e4465e1a485ddc09d",
+      "weights_sha256": "0683edcf6151811fb3ddd6f098ac48df644d74592c4919a5acdee1c37554add2",
+      "tensorflow": "2.21.0",
+      "keras": "3.15.1",
+      "python": "3.12.2",
+      "split_sha256": "0cf4cc1ca5601a80a4a9c7ce47fb3435fcf95a36eba01802e0d08baf719f0c3c"
+    },
+    "class_names": [
+      "AnnualCrop",
+      "Forest",
+      "HerbaceousVegetation",
+      "Highway",
+      "Industrial",
+      "Pasture",
+      "PermanentCrop",
+      "Residential",
+      "River",
+      "SeaLake"
+    ],
+    "optimizer": "Adam",
+    "sample_counts": {
+      "train": 18900,
+      "val": 4050
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "devices": [
+      "/physical_device:CPU:0"
+    ],
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "TF_NUM_INTRAOP_THREADS": "1",
+      "TF_NUM_INTEROP_THREADS": "1"
+    }
+  },
+  "history": {
+    "loss": [
+      0.2699123024940491,
+      0.17625735700130463,
+      0.12610435485839844,
+      0.09489399939775467,
+      0.0758153572678566,
+      0.0799933597445488,
+      0.06298918277025223,
+      0.051510345190763474,
+      0.04660490155220032,
+      0.04410189017653465
+    ],
+    "accuracy": [
+      0.9113227725028992,
+      0.9416401982307434,
+      0.9601587057113647,
+      0.9687301516532898,
+      0.9757142663002014,
+      0.9747089743614197,
+      0.9793121814727783,
+      0.9839682579040527,
+      0.9846031665802002,
+      0.9865608215332031
+    ],
+    "val_loss": [
+      0.2155221551656723,
+      0.1816702038049698,
+      0.17912454903125763,
+      0.19362744688987732,
+      0.22114267945289612,
+      0.23572362959384918,
+      0.17346855998039246,
+      0.18637137115001678,
+      0.22662712633609772,
+      0.227235808968544
+    ],
+    "val_accuracy": [
+      0.9296296238899231,
+      0.941728413105011,
+      0.9444444179534912,
+      0.9409876465797424,
+      0.9414814710617065,
+      0.9454321265220642,
+      0.9548147916793823,
+      0.9548147916793823,
+      0.9493827223777771,
+      0.9508641958236694
+    ],
+    "learning_rate": [
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05
+    ],
+    "seconds": [
+      257.78484100001515,
+      242.464529400022,
+      241.1627693999908,
+      239.72246469999664,
+      238.20021039998392,
+      238.68388050000067,
+      238.955526500009,
+      239.6326044999878,
+      232.13624920000439,
+      228.51572649998707
+    ]
+  },
+  "recovery": null,
+  "epochs_run": 10,
+  "best_epoch": 7,
+  "best_val_accuracy": 0.9548147916793823,
+  "best_val_loss": 0.17346855998039246,
+  "trainable_params": 3142694,
+  "total_params": 4062381,
+  "time_per_epoch_s": 237.71932901110915,
+  "timing_excludes_first_epoch": true,
+  "best_checkpoint": "results\\efficientnet_checkpoints\\fine_block6a_lr_0001\\best_full.keras",
+  "latest_checkpoint": "results\\efficientnet_checkpoints\\fine_block6a_lr_0001\\latest_full.keras",
+  "best_checkpoint_sha256": "d9e548e97476923cb64c043e5db08f24f1f2648eb676aada22f1da49d9ee89c0",
+  "latest_checkpoint_sha256": "4e005752d8198de1dae94e386f44bc04aa9cd5239c83a973b73b2103a6fa8b0a"
+}
