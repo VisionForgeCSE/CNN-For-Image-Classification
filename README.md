@@ -4,10 +4,10 @@ Group _no._ · EN3150 Pattern Recognition
 
 | Name | Index no. | Part |
 |---|---|---|
-| _name_ | _index_ | Model A – standard CNN |
-| _name_ | _index_ | Model B – depthwise-separable CNN (≤ 100k parameters) |
-| _name_ | _index_ | MobileNetV2 (pre-trained, fine-tuned) |
-| _name_ | _index_ | EfficientNet-B0 (pre-trained, fine-tuned) |
+| Sandali Jayawardhana | 220282K | Model A – standard CNN |
+| Rashmika Yapa | 220734B | Model B – depthwise-separable CNN (≤ 100k parameters) |
+| Dinara De Silva | 220098C | MobileNetV2 (pre-trained, fine-tuned) |
+| Thumul Dasun | 220094K | EfficientNet-B0 (pre-trained, fine-tuned) |
 
 ## Dataset
 
