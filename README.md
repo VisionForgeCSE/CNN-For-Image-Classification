@@ -33,7 +33,6 @@ Comparison.ipynb            tables and plots built from results/*.json only
 data/eurosat_split.csv      which image is in train / val / test (data/eurosat/ is rebuilt locally)
 results/                    one <id>.json + <id>.keras per model – format in results/README.md
 figures/                    figures for the report
-planning/                   proposed GitHub issues
 ```
 
 ## How to run
